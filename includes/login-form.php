@@ -4,6 +4,7 @@ ob_start();
     if (isset($_POST['login']) && !empty($_POST['login'])) {
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $error = '';
 
         if (!empty($email) or !empty($password)) {
             $email = $getFromU->checkInput($email);
@@ -23,7 +24,7 @@ ob_start();
         }
     }
 
-ob_end_flush();
+
 ?>
 
 <div class="login-div">
@@ -51,3 +52,4 @@ ob_end_flush();
 
 	</form>
 </div>
+<?php ob_end_flush(); ?>

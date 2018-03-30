@@ -1,5 +1,6 @@
 <?php
-     include "core/init.php";
+    ob_start();
+        include "core/init.php";
 
 ?>
 
@@ -80,4 +81,5 @@
 </div><!-- ends wrapper -->
 </body>
 </html>
+<?php  ob_end_flush(); ?>
 

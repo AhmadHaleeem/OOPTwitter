@@ -1,12 +1,12 @@
 <?php
 ob_start();
-
     include "core/init.php";
-    session_start();
+
     $user_id = $_SESSION['user_id'];
 
     $user = $getFromU->userData($user_id);
-ob_end_flush();
+
+
 
 ?>
 
@@ -143,7 +143,7 @@ ob_end_flush();
 						 <div class="tweet-h-left">
 						 	<div class="<?php echo $user->profileImage; ?>">
 						 	<!-- PROFILE-IMAGE -->
-						 		<img src="PROFILE-IMAGE"/>
+
 						 	</div>
 						 </div>
 						 <div class="tweet-body">
@@ -207,3 +207,5 @@ ob_end_flush();
 </body>
 
 </html>
+
+<?php ob_end_flush(); ?>
